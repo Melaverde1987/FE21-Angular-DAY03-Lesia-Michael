@@ -1,0 +1,30 @@
+<div class="container my-4">
+    <div class="row">
+        <h2 class="bg-white m-0 py-3 text-center">My Basket</h2>
+        <div *ngFor="let item of items" class="col col-12">
+            <div class="box row py-3 border-bottom">
+                <div class="image col-2 p-0">
+                    <img src="{{item.image}}" alt="">
+                </div>
+                <div class="col-3 title h6 mt-4 text-center fs-4 fw-bold">{{ item.name }}</div>
+                <div class="col-3 px-3 fs-7 my-4">Price: {{item.price.toFixed(2) | currency}}</div>
+            </div>
+        </div>
+
+        <form *ngIf="items != 0; else other_content" class="bg-white py-3" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+            <div>
+                <label class="col-12" for="name">Write your name</label>
+                <input id="name" type="text" formControlName="name">
+            </div>
+            <div>
+                <button class="button col-3 bg-primary border-0 my-4 text-white py-2" type="submit">Purchase</button>
+            </div>
+        </form>
+
+        <ng-template #other_content>
+            <div class="row bg-white m-0 py-4">Your basket is empty</div>
+        </ng-template>
+    </div>
+</div>
+
+

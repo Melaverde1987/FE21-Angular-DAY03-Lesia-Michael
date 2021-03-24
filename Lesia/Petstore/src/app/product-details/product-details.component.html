@@ -1,0 +1,19 @@
+<div class="container my-4">
+    <div class="row">
+        <h2 class="bg-white m-0 py-3 text-center">Product Details</h2>
+        <div *ngIf="product" class="col col-12 mb-4">
+            <div class="box row">
+                <div class="image col-6 p-0">
+                    <img src="{{product.image}}" alt="">
+                </div>
+                <div class="col-6">
+                    <div class="title h5 mt-4 text-center fs-4 fw-bold">{{ product.name }}</div>
+                    <div class="px-3 fs-7 my-4">{{ product.description }}</div>
+                    <div class="px-3 fs-7 my-4"><span class='badge my_badge py-3 px-4'>Price:
+                            {{product.price.toFixed(2) | currency}}</span></div>
+                    <button class="bg-primary text-white p-3 col-12 border-0" (click)="addToBasket(product)">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

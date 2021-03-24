@@ -1,0 +1,22 @@
+img {
+  height: 20rem;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.box {
+  height: 100%;
+  background-color: white !important;
+  cursor: pointer;
+}
+
+.my_badge {
+  font-size: 1rem;
+  color: rgb(65, 65, 65);
+  border: 1px solid rgb(65, 65, 65);
+}
