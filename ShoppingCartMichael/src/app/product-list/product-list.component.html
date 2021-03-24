@@ -1,0 +1,21 @@
+<h3>Products</h3>
+<div class="row mt-4">
+    <div *ngFor="let product of products; index as productId" class="col-12 col-md-6 col-lg-4">
+        <div class="card mb-3">
+            <div>
+                <div>
+                    <img src="{{product.productImage}}" alt="carImage">
+                </div>
+                <div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a routerLink="{{productId}}">{{product.productName}}</a>
+                            </h5>
+                        <p>Product Description:</p>
+                        <p>{{product.productDescription}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
