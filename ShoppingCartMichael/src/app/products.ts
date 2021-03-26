@@ -1,4 +1,4 @@
-export const products: any =
+export const siteItems: any =
 [{
   "productImage": "https://www.flaticon.com/premium-icon/icons/svg/2926/2926751.svg",
   "productName": "Oncorhynchus nerka",

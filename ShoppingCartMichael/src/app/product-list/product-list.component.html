@@ -1,6 +1,6 @@
 <h3>Products</h3>
 <div class="row mt-4">
-    <div *ngFor="let product of products; index as productId" class="col-12 col-md-6 col-lg-4">
+    <div *ngFor="let product of products; index as abc" class="col-12 col-md-6 col-lg-4">
         <div class="card mb-3">
             <div>
                 <div>
@@ -9,10 +9,10 @@
                 <div>
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a routerLink="{{productId}}">{{product.productName}}</a>
+                            <a routerLink="{{abc}}">{{product.productName}}</a>
                             </h5>
-                        <p>Product Description:</p>
-                        <p>{{product.productDescription}}</p>
+                        <p>Product Type: {{product.productType}}</p>
+                        <p>Product Price: {{product.productPrice}}</p>
                     </div>
                 </div>
             </div>
